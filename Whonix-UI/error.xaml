@@ -1,0 +1,14 @@
+﻿<Window x:Class="Whonix_UI.error"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Whonix_UI"
+        mc:Ignorable="d"
+        Title="Error" Height="600" Width="600">
+    <Grid>
+        <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,510,0,0" Click="OK_Click" Height="55" FontSize="36"/>
+        <TextBox x:Name="error_text" HorizontalAlignment="Left" Height="500" TextWrapping="Wrap" Text="You appear to execute this program from a folder which doesn't contain the necessary files for it to operate properly. Please try reinstalling this program via the Whonix-Installer. If the program persists, please contact the developer at:&#xD;&#xA;&#xD;&#xA;https://forums.whonix.org" VerticalAlignment="Top" Width="575" Margin="10,10,0,0" FontSize="36" IsReadOnly="True"/>
+
+    </Grid>
+</Window>
