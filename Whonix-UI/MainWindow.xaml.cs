@@ -51,7 +51,7 @@ namespace Whonix_UI
                 b.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 b.StartInfo.Arguments = "/K VBoxManage startvm Whonix-Gateway";
                 b.Start();
-                StartStop.Content = "Stop Whonix";      
+                StartStop.Content = "Stop Whonix";
             }
             else if (StartStop.Content.ToString() == "Stop Whonix" && File.Exists(Directory.GetCurrentDirectory() + @"\VBoxManage.exe"))
             {
