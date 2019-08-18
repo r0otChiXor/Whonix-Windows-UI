@@ -44,12 +44,12 @@ namespace Whonix_UI
                 Process a = new Process();
                 a.StartInfo.FileName = "cmd.exe";
                 a.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                a.StartInfo.Arguments = "/K VBoxManage startvm Whonix-Workstation";
+                a.StartInfo.Arguments = "/K VBoxManage startvm Whonix-Workstation-XFCE";
                 a.Start();
                 Process b = new Process();
                 b.StartInfo.FileName = "cmd.exe";
                 b.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                b.StartInfo.Arguments = "/K VBoxManage startvm Whonix-Gateway";
+                b.StartInfo.Arguments = "/K VBoxManage startvm Whonix-Gateway-XFCE";
                 b.Start();
                 StartStop.Content = "Stop Whonix";
             }
@@ -58,12 +58,12 @@ namespace Whonix_UI
                 Process a = new Process();
                 a.StartInfo.FileName = "cmd.exe";
                 a.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                a.StartInfo.Arguments = "/K VBoxManage controlvm Whonix-Workstation poweroff";
+                a.StartInfo.Arguments = "/K VBoxManage controlvm Whonix-Workstation-XFCE poweroff";
                 a.Start();
                 Process b = new Process();
                 b.StartInfo.FileName = "cmd.exe";
                 b.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                b.StartInfo.Arguments = "/K VBoxManage controlvm Whonix-Gateway poweroff";
+                b.StartInfo.Arguments = "/K VBoxManage controlvm Whonix-Gateway-XFCE poweroff";
                 b.Start();
                 StartStop.Content = "Start Whonix";
             }
