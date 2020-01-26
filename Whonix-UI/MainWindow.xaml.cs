@@ -26,9 +26,9 @@ namespace Whonix_UI
             }
             else
             {
-                error e = new error();
-                e.Show();
-                this.Close();
+              //  error e = new error();
+              //  e.Show();
+              //  this.Close();
             }
         }
 
@@ -43,12 +43,12 @@ namespace Whonix_UI
             {
                 Process a = new Process();
                 a.StartInfo.FileName = "cmd.exe";
-                a.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                a.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
                 a.StartInfo.Arguments = "/K VBoxManage startvm Whonix-Workstation-XFCE";
                 a.Start();
                 Process b = new Process();
                 b.StartInfo.FileName = "cmd.exe";
-                b.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                b.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
                 b.StartInfo.Arguments = "/K VBoxManage startvm Whonix-Gateway-XFCE";
                 b.Start();
                 StartStop.Content = "Stop Whonix";
@@ -81,6 +81,11 @@ namespace Whonix_UI
             {
                 e.Cancel = true;
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

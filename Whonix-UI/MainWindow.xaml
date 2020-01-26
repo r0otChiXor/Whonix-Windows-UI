@@ -5,10 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Whonix_UI"
         mc:Ignorable="d"
-        Title="Whonix" Height="600" Width="600" Closing="Window_Closing">
+        Title="Whonix" Closing="Window_Closing" WindowStartupLocation="CenterScreen" WindowStyle="None" BorderThickness="1" ResizeMode="NoResize" WindowState="Maximized" d:DesignWidth="1062" d:DesignHeight="672">
+    <Window.BitmapEffect>
+        <DropShadowBitmapEffect/>
+    </Window.BitmapEffect>
     <Grid>
-        <Button x:Name="StartStop" Content="Start Whonix" HorizontalAlignment="Left" VerticalAlignment="Top" Width="575" Margin="10,10,0,0" Height="450" FontSize="72" Click="StartStop_Click"/>
-        <Button x:Name="Advanced" Content="Advanced" HorizontalAlignment="Left" VerticalAlignment="Top" Width="575" Margin="10,465,0,0" Height="97.5" FontSize="48" Click="Advanced_Click"/>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF33B6E7" Offset="0"/>
+                <GradientStop Color="#FF1970A6" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="348"/>
+            <RowDefinition/>
+            <RowDefinition Height="76"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical">
+            <Viewbox x:Name="vb_whonix_logo" HorizontalAlignment="Center" Height="200.524" VerticalAlignment="Center" Width="685" Stretch="UniformToFill" Margin="0,100,0,0">
+                <local:whonix_logo_control Height="319.524" Width="1056" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </Viewbox>
+            <TextBlock x:Name="txt_slogan" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Anonymize Everything You Do Online" VerticalAlignment="Center" Foreground="#FFEAEAEA" FontSize="18" FontFamily="Tahoma" Margin="0,-5,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Viewbox x:Name="wb_mouse" HorizontalAlignment="Center" Height="85.596" VerticalAlignment="Center" Width="157" Stretch="Fill" Margin="0,0,0,20">
+                <local:mouse_control Height="234" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" d:IsLocked="True"/>
+
+            </Viewbox>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button x:Name="StartStop" Content="START WHONIX" HorizontalAlignment="Left" VerticalAlignment="Top" Width="350" Height="111" FontSize="36" Click="StartStop_Click" Margin="5" FontFamily="Verdana" Background="#FF2B2B2B" Foreground="White"/>
+                <Button x:Name="Advanced" Content="ADVANCED" FontSize="36" Click="Advanced_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Height="111" Width="310" Margin="5" FontFamily="Verdana" Background="#FF2B2B2B" Foreground="White"/>
+            </StackPanel>
+
+        </StackPanel>
+        <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="https://www.whonix.org" VerticalAlignment="Center" Foreground="White" FontSize="18" HorizontalAlignment="Center"/>
 
     </Grid>
 </Window>
