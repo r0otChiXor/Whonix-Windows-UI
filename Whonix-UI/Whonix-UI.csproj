@@ -119,7 +119,7 @@
     <Resource Include="whonix.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="whonix.PNG" />
+    <Resource Include="assets\900px-Whonix_donate_bitcoin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

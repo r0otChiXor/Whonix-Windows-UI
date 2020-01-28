@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("whonix.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/900px-whonix_donate_bitcoin.png")]
 
 

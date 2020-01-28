@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Whonix_UI"
         mc:Ignorable="d"
-        Title="Whonix" Closing="Window_Closing" WindowStartupLocation="CenterScreen" WindowStyle="None" BorderThickness="1" ResizeMode="NoResize" WindowState="Maximized" d:DesignWidth="1062" d:DesignHeight="672">
+        Title="Whonix" Closing="Window_Closing" WindowStartupLocation="CenterScreen" WindowStyle="None" BorderThickness="1" ResizeMode="NoResize" d:DesignWidth="1062" d:DesignHeight="672" WindowState="Maximized">
     <Window.BitmapEffect>
         <DropShadowBitmapEffect/>
     </Window.BitmapEffect>
@@ -21,13 +21,30 @@
             <RowDefinition/>
             <RowDefinition Height="76"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Vertical">
-            <Viewbox x:Name="vb_whonix_logo" HorizontalAlignment="Center" Height="200.524" VerticalAlignment="Center" Width="685" Stretch="UniformToFill" Margin="0,100,0,0">
-                <local:whonix_logo_control Height="319.524" Width="1056" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="92"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="951*"/>
+                    <ColumnDefinition Width="109*"/>
+                </Grid.ColumnDefinitions>
+                <Image HorizontalAlignment="Right" Grid.Column="1" VerticalAlignment="Center" Source="assets/900px-Whonix_donate_bitcoin.png" Margin="10"/>
+            </Grid>
+            <StackPanel Orientation="Vertical" Grid.RowSpan="2">
+                <Viewbox x:Name="vb_whonix_logo" HorizontalAlignment="Center" Height="200.524" VerticalAlignment="Center" Width="685" Stretch="UniformToFill" Margin="0,100,0,0">
+                    <local:whonix_logo_control Height="319.524" Width="1056" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            </Viewbox>
-            <TextBlock x:Name="txt_slogan" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Anonymize Everything You Do Online" VerticalAlignment="Center" Foreground="#FFEAEAEA" FontSize="18" FontFamily="Tahoma" Margin="0,-5,0,0"/>
-        </StackPanel>
+                </Viewbox>
+                <TextBlock x:Name="txt_slogan" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Anonymize Everything You Do Online" VerticalAlignment="Center" Foreground="#FFEAEAEA" FontSize="24"  Margin="0,-5,0,0" FontWeight="Bold">
+                    <TextBlock.BitmapEffect>
+                        <DropShadowBitmapEffect ShadowDepth="1" Opacity="0.9" Softness="0.42"/>
+                    </TextBlock.BitmapEffect>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
         <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Viewbox x:Name="wb_mouse" HorizontalAlignment="Center" Height="85.596" VerticalAlignment="Center" Width="157" Stretch="Fill" Margin="0,0,0,20">
                 <local:mouse_control Height="234" Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" d:IsLocked="True"/>
@@ -40,7 +57,14 @@
             </StackPanel>
 
         </StackPanel>
-        <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="https://www.whonix.org" VerticalAlignment="Center" Foreground="White" FontSize="18" HorizontalAlignment="Center"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="144*"/>
+                <ColumnDefinition Width="121*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock TextWrapping="Wrap" Text="https://www.whonix.org" VerticalAlignment="Center" Foreground="White" FontSize="18" HorizontalAlignment="Center" Margin="11.5,19,10,9" Width="554.5"/>
+
+        </Grid>
 
     </Grid>
 </Window>
